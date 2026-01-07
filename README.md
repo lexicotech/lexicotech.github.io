@@ -1,0 +1,2 @@
+# onezerotechs.github.io
+blog
