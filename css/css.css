@@ -20,6 +20,12 @@ p,ul,ol {
     text-align: right;
 }
 
+.post-content p {
+  text-align: justify;
+  max-width: 700px;
+  hyphens: auto;
+}
+
 img {
     max-width: 100%;
     margin: 0 auto;
