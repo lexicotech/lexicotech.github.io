@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    
+    <meta name="description" content="Tecnologia do início ao fim">
+    
+    <title>Paralelismo real vs Concorrência</title>
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/css/css.css"> 
+    
+</head>
+<body>
+    <a href="/">&lt;&lt;</a>
+
+<article>
+  <p class="post-meta">
+  
+    <time datetime="22/02/2026">
+      22/02/2026
+    </time>
+  
+  </p>
+  
+  <h1>Paralelismo real vs Concorrência</h1>
+  
+  <div class="post-content">
+    <p>Existe uma confusão muito comum na programação moderna:<br>
+Concorrência e paralelismo não são a mesma coisa, elas podem até parecer, mas não são<br>
+No nível mais baixo — no hardware — são coisas completamente diferentes e entender essa diferença muda a forma como você escreve código.</p>
+<h3>Concorrência: alternância organizada</h3>
+<p>Concorrência é quando múltiplas tarefas progridem ao longo do tempo, mas não necessariamente ao mesmo tempo.<br>
+Um único núcleo de CPU consegue fazer concorrência.<br>
+Ele faz isso alternando entre tarefas muito rapidamente.</p>
+<p>Funciona assim:<br>
+Executa tarefa A por alguns microssegundos<br>
+Interrompe</p>
+<p>Executa tarefa B<br>
+Interrompe</p>
+<p>Volta para A<br>
+Isso cria a ilusão de simultaneidade.</p>
+<p>Event loop do JavaScript faz isso.<br>
+Async/await em muitas linguagens faz isso.<br>
+Mesmo sistemas com uma única thread conseguem fazer isso.</p>
+<p>Concorrência é sobre estrutura do programa e NÃO sobre hardware.</p>
+<h3>Paralelismo: execução física simultânea</h3>
+<p>Paralelismo é quando duas (ou mais) instruções estão sendo executadas literalmente ao mesmo tempo.</p>
+<p>Isso exige:<br>
+Múltiplos núcleos OU múltiplas unidades de execução<br>
+Se dois núcleos estão executando código ao mesmo tempo, isso é paralelismo real.<br>
+Não é alternância! É simultaneidade física!</p>
+<h3>Um exemplo mental simples</h3>
+<p>Imagine dois cozinheiros.</p>
+<p><strong>Concorrência</strong><br>
+Um cozinheiro sozinho:<br>
+corta cebola<br>
+mexe a panela<br>
+volta para cortar tomate<br>
+verifica o forno<br>
+Ele alterna tarefas.</p>
+<p><strong>Paralelismo</strong><br>
+Dois cozinheiros:<br>
+um corta cebola<br>
+outro mexe a panela<br>
+Ao mesmo tempo.</p>
+<h3>Por que isso importa?</h3>
+<p>Porque muitas vezes achamos que estamos usando “paralelismo”, mas estamos apenas usando concorrência.</p>
+<p>Exemplo clássico:<br>
+Node.js é concorrente</p>
+<p>Nem sempre é paralelo</p>
+<p>Outra situação:<br>
+Algumas linguagens possuem mecanismos que limitam execução paralela de código em múltiplas threads (como o GIL em algumas implementações).<br>
+Nesses casos, você pode ter concorrência, mas não paralelismo real.</p>
+<p><strong>Concorrência resolve organização<br>
+Paralelismo resolve performance</strong></p>
+<p>Concorrência é excelente para:<br>
+I/O<br>
+servidores<br>
+múltiplas requisições<br>
+manter o sistema responsivo</p>
+<p>Paralelismo é excelente para:<br>
+processamento pesado<br>
+cálculo numérico<br>
+renderização<br>
+compressão<br>
+tarefas CPU-bound</p>
+<p>Misturar os dois conceitos gera decisões erradas de arquitetura.</p>
+<h3>O que o hardware realmente faz</h3>
+<p>No fim das contas:<br>
+Concorrência é uma estratégia de agendamento.<br>
+Paralelismo é uma característica física da máquina.</p>
+<p>Você pode escrever código concorrente em uma máquina de um núcleo.<br>
+Você não pode ter paralelismo real sem múltiplos recursos físicos.</p>
+<p>Essa distinção parece simples.<br>
+Mas é uma das ideias que separa quem usa threads de quem entende threads.</p>
+<blockquote>
+<p>Concorrência é sobre dividir o tempo.<br>
+Paralelismo é sobre dividir o hardware.</p>
+</blockquote>
+
+  </div>
+</article>
+</body>
+</html>
