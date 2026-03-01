@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+    
+    
+    <meta name="description" content="Tecnologia do início ao fim">
+    
+    <title>FLOPS</title>
+    <link rel="icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/css/css.css"> 
+    
+</head>
+<body>
+    <a href="/">&lt;&lt;</a>
+
+<article>
+  <p class="post-meta">
+  
+    <time datetime="01/03/2026">
+      01/03/2026
+    </time>
+  
+  </p>
+  
+  <h1>FLOPS</h1>
+  
+  <div class="post-content">
+    <h1>FLOPS: o que realmente significa a potência de um computador?</h1>
+<p>Quando vemos notícias como:</p>
+<blockquote>
+<p>“O supercomputador mais rápido do mundo alcança 1 exaFLOP!”</p>
+</blockquote>
+<p>Parece algo absurdo e quase impossível de entender. Mas… o que isso realmente significa?</p>
+<p>Vamos entender isso neste post.</p>
+<hr>
+<h2>O que é FLOP?</h2>
+<p><strong>FLOP</strong> significa:</p>
+<blockquote>
+<p><em>Floating Point Operation</em><br>
+(Operação de ponto flutuante)</p>
+</blockquote>
+<p>Ou seja:<br>
+é <strong>uma única operação matemática com números decimais</strong>.</p>
+<p>Exemplos:</p>
+<ul>
+<li>5.3 + 2.1</li>
+<li>9.7 × 4.2</li>
+<li>1.5 ÷ 3.8</li>
+</ul>
+<p>Cada cálculo desses é um FLOP.</p>
+<hr>
+<h2>FLOPS ≠ FLOP</h2>
+<p>Detalhe importante:</p>
+<ul>
+<li><strong>FLOP</strong> → uma operação</li>
+<li><strong>FLOPS</strong> → <em>Floating Point Operations Per Second</em></li>
+</ul>
+<p>Ou seja:</p>
+<blockquote>
+<p>Quantas operações de ponto flutuante o computador consegue fazer <strong>por segundo</strong>.</p>
+</blockquote>
+<p>Aqui mudamos completamente a interpretação.</p>
+<hr>
+<h2>Entendendo os FLOPS</h2>
+<p>É muito comum pensar algo assim:</p>
+<blockquote>
+<p>“Meu notebook faz 150 bilhões de cálculos de ponto flutuante por ciclo.”</p>
+</blockquote>
+<p>Mas não é bem assim.</p>
+<p>Se uma CPU tiver 1 Hz de clock, significa que ela terá <strong>1 ciclo por segundo</strong>.</p>
+<p>Mas cuidado:<br>
+<strong>1 ciclo não significa necessariamente 1 FLOP.</strong></p>
+<p>As CPUs atuais funcionam em ciclos (GHz), mas o desempenho teórico em FLOPS depende da fórmula:</p>
+<p><strong>Operações por ciclo × ciclos por segundo</strong></p>
+<p>Se o processador roda a 3 GHz, isso significa:</p>
+<blockquote>
+<p>3 bilhões de ciclos por segundo.</p>
+</blockquote>
+<p>E dentro de cada ciclo ele pode executar múltiplas operações, graças a:</p>
+<ul>
+<li>Pipelines</li>
+<li>Execução fora de ordem</li>
+<li>Vetorização (SIMD)</li>
+<li>Múltiplas unidades de ponto flutuante</li>
+</ul>
+<p>Ou seja: uma CPU pode realizar <strong>vários FLOPs em um único ciclo</strong>.</p>
+<hr>
+<h2>Escala dos FLOPS</h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr>
+<th>Unidade</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 GFLOP</td>
+<td>1 bilhão de operações por segundo</td>
+</tr>
+<tr>
+<td>1 TFLOP</td>
+<td>1 trilhão</td>
+</tr>
+<tr>
+<td>1 PFLOP</td>
+<td>1 quatrilhão</td>
+</tr>
+<tr>
+<td>1 EFLOP</td>
+<td>1 quintilhão</td>
+</tr>
+</tbody>
+</table>
+</div><p>Nesse ponto, os cálculos que uma máquina pode realizar começam a ficar difíceis até de imaginar.</p>
+<hr>
+<h2>O computador mais rápido do mundo</h2>
+<p>Atualmente, o supercomputador Frontier, localizado no Oak Ridge National Laboratory, nos Estados Unidos, ultrapassou a marca de:</p>
+<blockquote>
+<p><strong>1 exaFLOP (1 EFLOP)</strong></p>
+</blockquote>
+<p>Isso significa: 1.000.000.000.000.000.000</p>
+<p>operações de ponto flutuante por segundo.</p>
+<p>É praticamente impossível visualizar esse número.</p>
+<hr>
+<h2>Por que medir em ponto flutuante?</h2>
+<p>Porque cálculos científicos usam números decimais:</p>
+<ul>
+<li>Simulações climáticas</li>
+<li>Física de partículas</li>
+<li>Modelagem molecular</li>
+<li>Inteligência artificial</li>
+<li>Treinamento de redes neurais</li>
+</ul>
+<p>Números inteiros são simples, mas muitas aplicações exigem precisão fracionária.</p>
+<p>E é aí que entra o padrão <strong>IEEE 754</strong> e toda a complexidade do hardware de ponto flutuante (FPU).</p>
+<hr>
+<h2>O que isso tem a ver com meu notebook?</h2>
+<p>Quando você vê que sua máquina tem, por exemplo:</p>
+<blockquote>
+<p>150 GFLOPS</p>
+</blockquote>
+<p>Isso significa que ela pode fazer <strong>150 bilhões de operações decimais por segundo</strong>, em condições ideais.</p>
+<p>Mas atenção:</p>
+<p>Estamos falando de <strong>pico teórico</strong>.</p>
+<p>Nem todo software:</p>
+<ul>
+<li>Usa vetorização</li>
+<li>É paralelo</li>
+<li>Consegue manter a CPU 100% ocupada</li>
+</ul>
+<p>Além disso, existem gargalos de memória.</p>
+<p>Ou seja:</p>
+<p><strong>FLOPS é potência máxima possível, não desempenho real garantido.</strong></p>
+<hr>
+<h2>Resumo</h2>
+<p>Quando alguém fala:</p>
+<blockquote>
+<p>“Esse supercomputador tem 1 exaFLOP”</p>
+</blockquote>
+<p>Agora você sabe que significa:</p>
+<p>Ele consegue fazer <strong>um quintilhão de operações matemáticas decimais por segundo.</strong></p>
+<p>Não é por ciclo.<br>
+Não é por núcleo.<br>
+É <strong>por segundo</strong>.</p>
+<p>E tudo isso acontece porque, por baixo:</p>
+<ul>
+<li>Existem bilhões de transistores</li>
+<li>Unidades vetoriais trabalhando em paralelo</li>
+<li>Pipelines profundos</li>
+<li>Execução fora de ordem</li>
+<li>Múltiplas FPUs</li>
+</ul>
+<hr>
+<h2>Conclusão</h2>
+<p>FLOPS não é só um número bonito do marketing.</p>
+<p>É uma medida da capacidade bruta de cálculo científico de uma máquina.</p>
+<p>E quando você entende isso, começa a enxergar o processador não como uma “caixa preta”,<br>
+mas como um sistema matemático absurdamente otimizado executando bilhões (ou trilhões) de operações por segundo.</p>
+
+  </div>
+</article>
+</body>
+</html>
